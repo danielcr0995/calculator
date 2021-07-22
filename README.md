@@ -1,2 +1,2 @@
-# calculator
-odins project ccalculator
+# Calculator
+
