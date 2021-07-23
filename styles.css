@@ -1,0 +1,81 @@
+body{
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+}
+#calculator{
+    height: 600px;
+    width: 400px;
+    background-color: rgb(112, 112, 112);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* justify-content: center; */
+    padding: 20px;
+}
+#result{
+    height: 20%;
+    width:90%;
+    background-color: rgb(86, 143, 103);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 20px;
+       
+}
+
+#keypad{
+    /* padding: 20px; */
+    /* padding-top: 10px; */
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 10px;
+    height: 100%;
+    width:100%;
+    border-radius: 10%;
+    
+}
+
+
+
+#special-key{
+    display: grid;
+    /* flex-direction: row; */
+    padding-top: 20px;     
+    /* justify-content: space-between; */
+    grid-template-columns: 1fr 0.5fr;
+    gap:10px;
+    grid-template-rows: 1fr;
+    padding-bottom: 10px;
+
+}
+
+.spkey{
+    height:70px;
+    width: 200px;
+    border-radius: 10px;
+    /* display: flex; */
+    padding:10px;
+    /* flex-direction: row;  */
+    /* align-items: center; */
+    /* justify-content: center; */
+    /* grid-row: 1/2; */
+
+
+}
+
+.key{
+    border-radius: 50%;
+}
+
+button{
+    font-size: 2rem;
+    outline: none;
+    font-family: "Didone Room Numbers";
+}
