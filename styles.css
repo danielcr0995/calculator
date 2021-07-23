@@ -41,6 +41,12 @@ body{
     border-radius: 10%;
     
 }
+button{
+    font-size: 2rem;
+    outline: none;
+    font-family: "Didone Room Numbers";
+    
+}
 
 
 
@@ -49,7 +55,7 @@ body{
     /* flex-direction: row; */
     padding-top: 20px;     
     /* justify-content: space-between; */
-    grid-template-columns: 1fr 0.5fr;
+    grid-template-columns: 1fr 1fr;
     gap:10px;
     grid-template-rows: 1fr;
     padding-bottom: 10px;
@@ -72,10 +78,19 @@ body{
 
 .key{
     border-radius: 50%;
+    background-color: rgb(243, 212, 172);
 }
 
-button{
-    font-size: 2rem;
-    outline: none;
-    font-family: "Didone Room Numbers";
+.number{
+    background-color: rgb(241, 235, 226);
 }
+
+.clear{
+    background-color: rgb(199, 139, 115);
+    
+}
+
+.del{
+    background-color: rgb(160, 178, 194);
+}
+
