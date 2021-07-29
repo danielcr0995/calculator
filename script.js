@@ -1,13 +1,16 @@
 let btns=document.querySelectorAll('button');
 
-let show=document.querySelector("#screen");
-show.textContent='7+7';
-
+let show=document.querySelector("#top");
+show.textContent='';
+let showresult=document.querySelector('#bottom')
+showresult.textContent='0';
 let k7=document.getElementById("7");
 // k7.addEventListener('keydown',function(e){
 //     console.log(e);
 // })
 let elemstoshow=['1','2','3','4','5','6','7','8','9','0','.','/','*','-','+']
+let elemstoshowresult=['1','2','3','4','5','6','7','8','9','0']
+let operations=['/','*','-','+']
 console.log(btns);
 btns.forEach(btn=>btn.addEventListener('click',print_screen_button))
 // window.addEventListener('click', function(e){
@@ -42,17 +45,25 @@ function print_screen_button(e){
 }
 
 function printscreen(text){
-    let show=document.querySelector("#screen");
+    // let show=document.querySelector("#screen");
     if(elemstoshow.indexOf(text)!==-1){
         show.textContent+=text;
+        // if(elemstoshowresult.indexOf(text)!==-1){
+            if (elemstoshowresult.includes(text)){
+                showresult.textContent+=text
+            }else if (operations.includes(text)){
+                showresult.textContent=''
+            }
+        // }
     }
-    if (text==='Enter'){
+    if (text==='Enter'|| text=== '='){
         if(show.textContent[0]==='-'){
             show.textContent=show.textContent.slice(1);
             show.textContent='-'+calculate(show.textContent);
         }
 
-        show.textContent=calculate(show.textContent);
+        showresult.textContent=calculate(show.textContent);
+        // show.textContent=showresult.textContent
         
     }
     let elems=text.split('')
